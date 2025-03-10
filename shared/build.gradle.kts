@@ -39,6 +39,11 @@ kotlin {
         commonTest.dependencies {
             implementation(libs.kotlin.test)
         }
+        androidMain.dependencies {
+            dependencies{
+                implementation("com.squareup.sqldelight:android-driver:1.5.3")
+            }
+        }
     }
 }
 
