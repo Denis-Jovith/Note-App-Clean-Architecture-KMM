@@ -33,6 +33,7 @@ kotlin {
             //Place to place the multiplatform dependencies
             dependencies{
                 implementation("com.sqldelight:runtime:1.5.3")
+                implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.4.0")
             }
         }
         commonTest.dependencies {
