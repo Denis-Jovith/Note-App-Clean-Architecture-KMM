@@ -43,4 +43,11 @@ dependencies {
     implementation(libs.compose.material3)
     implementation(libs.androidx.activity.compose)
     debugImplementation(libs.compose.ui.tooling)
+
+
+    implementation(libs.kotlinx.datetime)
+    implementation(libs.hilt.android.compiler)
+    implementation(libs.androidx.x.x.x)
+    implementation(libs.androidx.hilt.navitation.compose)
+
 }
