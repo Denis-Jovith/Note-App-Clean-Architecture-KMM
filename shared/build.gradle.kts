@@ -29,7 +29,11 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
-            //put your multiplatform dependencies here
+            //put your multiplatform dep
+            //Place to place the multiplatform dependencies
+            dependencies{
+                implementation("com.sqldelight:runtime:1.5.3")
+            }
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
