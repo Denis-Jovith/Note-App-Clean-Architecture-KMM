@@ -56,7 +56,6 @@ android {
     namespace = "com.example.noteappkmmcleancode"
     compileSdk = 34
     defaultConfig {
-        
         minSdk = 24
     }
     compileOptions {
