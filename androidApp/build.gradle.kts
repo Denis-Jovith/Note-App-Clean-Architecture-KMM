@@ -2,7 +2,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.kotlinAndroid)
     id("kotlin-kapt")
-    id("dagger.hilt.android.plugin") version "2.43.2" // Use the appropriate version
+//    id("dagger.hilt.android.plugin") version "2.56" // or the latest version
 }
 
 android {
@@ -62,7 +62,7 @@ dependencies {
 
     // Hilt
     implementation(libs.hilt.android)
-    kapt(libs.hilt.android.compiler)
+    implementation(libs.hilt.android.compiler)
 
     // AndroidX Dependencies
     implementation(libs.androidx.appcompat)
