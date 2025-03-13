@@ -2,7 +2,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.kotlinAndroid)
     id("kotlin-kapt")
-
+    alias(libs.plugins.compose.compiler) // Add Compose Compiler Plugin
 }
 
 android {
@@ -44,6 +44,16 @@ android {
     }
 }
 
+composeCompiler {
+    reportsDestination = layout.buildDirectory.dir("compose_compiler")
+    stabilityConfigurationFile = rootProject.layout.projectDirectory.file("stability_config.conf")
+}
+
+repositories {
+    google() // Required for Android dependencies (like androidx.appcompat)
+    mavenCentral() // Required for other dependencies
+}
+
 dependencies {
     implementation(project(":shared"))
 
@@ -65,17 +75,14 @@ dependencies {
     implementation(libs.hilt.android.compiler)
 
     // AndroidX Dependencies
-    implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.appcompat.v170)  // Specify a valid version
     implementation(libs.androidx.lifecycle.runtime.ktx)
 
     // Hilt Navigation Compose
     implementation(libs.androidx.hilt.navigation.compose)
-    coreLibraryDesugaring (libs.desugar.jdk.libs)
 
+    // Dagger Dependencies
     kapt(libs.dagger.compiler) // Required for annotation processing
-
-    implementation("com.google.dagger:dagger:2.44")
-    kapt("com.google.dagger:dagger-compiler:2.44")
-
-
+    implementation(libs.dagger.v244)
+    kapt(libs.dagger.compiler.v244)
 }
