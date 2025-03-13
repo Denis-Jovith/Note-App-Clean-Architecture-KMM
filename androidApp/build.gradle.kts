@@ -2,7 +2,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.kotlinAndroid)
     id("kotlin-kapt")
-//    id("dagger.hilt.android.plugin") version "2.56" // or the latest version
+//    id("dagger.hilt.android.plugin") version "2.55" // or the latest version
 }
 
 android {
@@ -71,5 +71,8 @@ dependencies {
     // Hilt Navigation Compose
     implementation(libs.androidx.hilt.navigation.compose)
     coreLibraryDesugaring (libs.desugar.jdk.libs)
+
+    kapt(libs.dagger.compiler) // Required for annotation processing
+
 
 }
