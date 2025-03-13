@@ -3,8 +3,6 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
-    id("com.android.library")
-    id("com.squareup.sqldelight")
 }
 
 kotlin {
@@ -32,8 +30,8 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
             // Place multiplatform dependencies here
-            implementation("com.squareup.sqldelight:runtime:1.5.3")
-            implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.4.0")
+            implementation(libs.runtime)
+            implementation(libs.kotlinx.datetime)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
