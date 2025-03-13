@@ -2,7 +2,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.kotlinAndroid)
     id("kotlin-kapt")
-//    id("dagger.hilt.android.plugin") version "2.55" // or the latest version
+
 }
 
 android {
@@ -73,6 +73,9 @@ dependencies {
     coreLibraryDesugaring (libs.desugar.jdk.libs)
 
     kapt(libs.dagger.compiler) // Required for annotation processing
+
+    implementation("com.google.dagger:dagger:2.44")
+    kapt("com.google.dagger:dagger-compiler:2.44")
 
 
 }
