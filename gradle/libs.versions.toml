@@ -1,11 +1,14 @@
 [versions]
 agp = "8.7.3"
-daggerCompiler = "2.44"
+appcompat = "1.7.0"
+dagger = "2.49"
+daggerCompiler = "2.49"
+daggerCompilerVersion = "2.44"
 desugar_jdk_libs = "2.1.5"
 hiltAndroidCompiler = "2.42"
-hiltAndroid = "2.42"
+hiltAndroid = "2.49"
 hiltNavitationCompose = "1.2.0"
-androidxAppCompat = "1.8.0"
+androidxAppCompat = "1.7.0"
 androidxLifecycleRuntimeKtx = "2.8.7"
 kotlin = "2.1.10"
 compose = "1.7.8"
@@ -16,8 +19,12 @@ nativeDriver = "1.5.3"
 
 [libraries]
 android-driver = { module = "com.squareup.sqldelight:android-driver", version.ref = "nativeDriver" }
+androidx-appcompat-v170 = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
 androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavitationCompose" }
+dagger = { module = "com.google.dagger:dagger", version.ref = "daggerCompiler" }
 dagger-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = "daggerCompiler" }
+dagger-compiler-v244 = { module = "com.google.dagger:dagger-compiler", version.ref = "daggerCompilerVersion" }
+dagger-v244 = { module = "com.google.dagger:dagger", version.ref = "dagger" }
 desugar_jdk_libs = { module = "com.android.tools:desugar_jdk_libs", version.ref = "desugar_jdk_libs" }
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
 hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hiltAndroidCompiler" }
