@@ -29,25 +29,18 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
-            //put your multiplatform dep
-            //Place to place the multiplatform dependencies
-            dependencies{
-                implementation("com.sqldelight:runtime:1.5.3")
-                implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.4.0")
-            }
+            // Place multiplatform dependencies here
+            implementation("com.squareup.sqldelight:runtime:1.5.3")
+            implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.4.0")
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
         }
         androidMain.dependencies {
-            dependencies{
-                implementation("com.squareup.sqldelight:android-driver:1.5.3")
-            }
+            implementation(libs.android.driver)
         }
         iosMain.dependencies {
-            dependencies{
-                implementation("com.squareup.sqldelight:native-driver:1.5.3")
-            }
+            implementation(libs.native.driver)
         }
     }
 }
