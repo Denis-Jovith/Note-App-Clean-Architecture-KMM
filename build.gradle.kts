@@ -6,6 +6,6 @@ plugins {
     alias(libs.plugins.kotlinMultiplatform).apply(false)
 
     // Compose plugin for Compose-based UI projects
-    alias(libs.plugins.compose.compiler).apply(false)
+    alias(libs.plugins.compose.compiler) apply false
 
 }
