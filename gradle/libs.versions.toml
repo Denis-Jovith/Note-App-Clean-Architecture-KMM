@@ -3,6 +3,7 @@ agp = "8.7.2"
 desugar_jdk_libs = "1.1.5"
 hiltAndroidCompiler = "2.42"
 hiltAndroid = "2.42"
+hiltNavitationCompose = "1.0.0"
 androidxAppCompat = "1.8.0"
 androidxLifecycleRuntimeKtx = "2.6.0"
 kotlin = "2.0.0"
@@ -14,7 +15,7 @@ nativeDriver = "1.5.3"
 
 [libraries]
 android-driver = { module = "com.squareup.sqldelight:android-driver", version.ref = "nativeDriver" }
-androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
+androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavitationCompose" }
 desugar_jdk_libs = { module = "com.android.tools:desugar_jdk_libs", version.ref = "desugar_jdk_libs" }
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
 hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hiltAndroidCompiler" }
@@ -29,6 +30,7 @@ compose-foundation = { module = "androidx.compose.foundation:foundation", versio
 compose-material3 = { module = "androidx.compose.material3:material3", version.ref = "compose-material3" }
 kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinxDatetime" }
 native-driver = { module = "com.squareup.sqldelight:native-driver", version.ref = "nativeDriver" }
+runtime = { module = "com.squareup.sqldelight:runtime", version.ref = "nativeDriver" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
