@@ -50,12 +50,7 @@ kotlin {
     }
 }
 
-sqldelight {
-    database("NoteDatabase") {
-        packageName = "com.example.noteappkmmcleancode.android" // Replace with your package name
-        sourceFolders = listOf("sqldelight")
-    }
-}
+
 
 android {
     namespace = "com.example.noteappkmmcleancode"
