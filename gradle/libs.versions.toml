@@ -16,6 +16,7 @@ compose-material3 = "1.3.1"
 androidx-activityCompose = "1.10.1"
 kotlinxDatetime = "0.4.0"
 nativeDriver = "1.5.3"
+sqldelight = "2.0.1" # Add SQLDelight version
 
 [libraries]
 android-driver = { module = "com.squareup.sqldelight:android-driver", version.ref = "nativeDriver" }
@@ -41,6 +42,11 @@ kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.
 native-driver = { module = "com.squareup.sqldelight:native-driver", version.ref = "nativeDriver" }
 runtime = { module = "com.squareup.sqldelight:runtime", version.ref = "nativeDriver" }
 
+# Add SQLDelight libraries
+sqldelight-runtime = { module = "app.cash.sqldelight:runtime", version.ref = "sqldelight" }
+sqldelight-android-driver = { module = "app.cash.sqldelight:android-driver", version.ref = "sqldelight" }
+sqldelight-native-driver = { module = "app.cash.sqldelight:native-driver", version.ref = "sqldelight" }
+
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 androidLibrary = { id = "com.android.library", version.ref = "agp" }
@@ -48,3 +54,4 @@ kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 kotlinCocoapods = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "kotlin" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+sqldelight = { id = "app.cash.sqldelight", version.ref = "sqldelight" } # Add SQLDelight plugin
