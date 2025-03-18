@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
+
 }
 
 kotlin {
@@ -42,6 +43,12 @@ kotlin {
         iosMain.dependencies {
             implementation(libs.native.driver)
         }
+    }
+}
+
+sqldelight{
+    database("NoteDatabase"){
+
     }
 }
 
